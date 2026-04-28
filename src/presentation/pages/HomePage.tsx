@@ -1,0 +1,288 @@
+import React from 'react';
+import styled from 'styled-components';
+import { COLORS } from '../../shared/constants';
+import { Section, Container, Grid } from '../../shared/utils/styledComponents';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import Hero from '../components/Hero';
+import ProyectoCard from '../components/ProyectoCard';
+import ConvocatoriaCard from '../components/ConvocatoriaCard';
+import SemilleristCard from '../components/SemilleristCard';
+import type { Proyecto, Convocatoria, Semillerista } from '../../shared/types';
+
+// Datos de ejemplo
+const proyectosEjemplo: Proyecto[] = [
+  {
+    id: '1',
+    titulo: 'Sistema de Monitoreo IoT',
+    descripcion: 'Desarrollo de un sistema inteligente de monitoreo en tiempo real para aplicaciones industriales.',
+    imagen: '',
+    estado: 'activo',
+    investigadores: ['Dr. Juan García', 'Ing. María López'],
+    tags: ['IoT', 'Embebidos', 'Tiempo Real'],
+    fechaInicio: '2024-01-15',
+  },
+  {
+    id: '2',
+    titulo: 'Procesamiento de Señales Biomédicas',
+    descripcion: 'Análisis avanzado de señales ECG y EEG usando técnicas de machine learning.',
+    imagen: '',
+    estado: 'activo',
+    investigadores: ['Dr. Carlos Ruiz', 'Ing. Ana Martinez'],
+    tags: ['Biomédica', 'DSP', 'ML'],
+    fechaInicio: '2023-09-01',
+  },
+  {
+    id: '3',
+    titulo: 'Convertidores DC-DC de Alta Eficiencia',
+    descripcion: 'Investigación en convertidores de potencia para aplicaciones de energías renovables.',
+    imagen: '',
+    estado: 'finalizado',
+    investigadores: ['Dr. Roberto Díaz'],
+    tags: ['Electrónica de Potencia', 'Energías Renovables'],
+    fechaInicio: '2022-03-10',
+    fechaFin: '2024-03-10',
+  },
+];
+
+const convocatoriasEjemplo: Convocatoria[] = [
+  {
+    id: '1',
+    titulo: 'Semilleristas 2026 - Ingeniería Electrónica',
+    descripcion: 'Convocatoria para estudiantes interesados en participar en proyectos de investigación del semillero Magma.',
+    fechaInicio: '2026-04-15',
+    fechaFin: '2026-05-30',
+    requisitos: [
+      'Estudiante activo de ingeniería electrónica',
+      'Promedio académico mínimo 3.5',
+      'Disponibilidad de 10 horas semanales',
+      'Interés demostrado en investigación'
+    ],
+    estado: 'abierta',
+    enlaceFormulario: 'https://forms.example.com/convocatoria-2026'
+  },
+  {
+    id: '2',
+    titulo: 'Pasantías',
+    descripcion: 'Oportunidad de realizar pasantías de investigacion.',
+    fechaInicio: '2026-05-01',
+    fechaFin: '2026-06-15',
+    requisitos: [
+      'Motivacion suficiente',
+      'Idea de investigacion de vanguardia',
+      'Excelente desempeño académico'
+    ],
+    estado: 'proxima'
+  },
+];
+
+const semilleristasEjemplo: Semillerista[] = [
+  {
+    id: '1',
+    nombre: 'Laura',
+    apellido: 'Pérez González',
+    email: 'laura.perez@unal.edu.co',
+    foto: '',
+    linea: 'Procesamiento Digital de Señales',
+    estado: 'activo',
+    redesSociales: {
+      github: 'https://github.com/saballeth',
+      linkedin: 'https://www.linkedin.com/in/camilo-saballeth/'
+    }
+  },
+  {
+    id: '2',
+    nombre: 'Daniel',
+    apellido: 'Rodríguez López',
+    email: 'daniel.rodriguez@unal.edu.co',
+    foto: '',
+    linea: 'Electrónica de Potencia',
+    estado: 'activo',
+    redesSociales: {
+      github: 'https://github.com/saballeth'
+    }
+  },
+  {
+    id: '3',
+    nombre: 'Camila',
+    apellido: 'Salazar Martínez',
+    email: 'camila.salazar@unal.edu.co',
+    foto: '',
+    linea: 'Sistemas Embebidos',
+    estado: 'activo'
+  },
+];
+
+const SectionTitle = styled.h2`
+  text-align: center;
+  color: ${COLORS.primary};
+  margin-bottom: 0.5rem;
+`;
+
+const SectionSubtitle = styled.p`
+  text-align: center;
+  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+`;
+
+const StatsContainer = styled(Grid)`
+  margin-bottom: 4rem;
+  grid-template-columns: repeat(4, 1fr);
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 640px) {
+    grid-template-columns: 1fr;
+  }
+`;
+
+const StatBox = styled.div`
+  background: linear-gradient(135deg, ${COLORS.primary}, ${COLORS.secondary});
+  color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(10, 59, 94, 0.2);
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+  }
+`;
+
+const StatNumber = styled.div`
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+`;
+
+const StatLabel = styled.div`
+  font-size: 0.9rem;
+  opacity: 0.9;
+  font-weight: 500;
+`;
+
+export const HomePage: React.FC = () => {
+  return (
+    <>
+      <Header activeRoute="/" />
+      
+      <Hero
+        title="Semillero de Investigación en Ingeniería Electrónica"
+        subtitle="Excelencia en investigación, innovación tecnológica y formación de investigadores de vanguardia"
+        primaryButtonText="Ver Proyectos"
+        primaryButtonHref="proyectos"
+        secondaryButtonText="Convocatorias Activas"
+        secondaryButtonHref="convocatorias"
+      />
+
+      <Section>
+        <Container>
+          <StatsContainer>
+            <StatBox>
+              <StatNumber>2+</StatNumber>
+              <StatLabel>Proyectos Activos</StatLabel>
+            </StatBox>
+            <StatBox>
+              <StatNumber>25+</StatNumber>
+              <StatLabel>Semilleristas</StatLabel>
+            </StatBox>
+            <StatBox>
+              <StatNumber>15+</StatNumber>
+              <StatLabel>Publicaciones</StatLabel>
+            </StatBox>
+            <StatBox>
+              <StatNumber>3</StatNumber>
+              <StatLabel>Líneas de Investigación</StatLabel>
+            </StatBox>
+          </StatsContainer>
+        </Container>
+      </Section>
+
+      <Section style={{ background: COLORS.neutral }}>
+        <Container>
+          <SectionTitle>Proyectos de Investigación</SectionTitle>
+          <SectionSubtitle>
+            Iniciativas de investigación en tecnologías de vanguardia
+          </SectionSubtitle>
+          
+          <Grid columns={3}>
+            {proyectosEjemplo.map(proyecto => (
+              <ProyectoCard 
+                key={proyecto.id} 
+                proyecto={proyecto}
+              />
+            ))}
+          </Grid>
+        </Container>
+      </Section>
+
+      <Section>
+        <Container>
+          <SectionTitle>Convocatorias Abiertas</SectionTitle>
+          <SectionSubtitle>
+            Únete a nuestro equipo de investigadores y desarrolladores
+          </SectionSubtitle>
+          
+          <Grid columns={2}>
+            {convocatoriasEjemplo.map(convocatoria => (
+              <ConvocatoriaCard 
+                key={convocatoria.id} 
+                convocatoria={convocatoria}
+              />
+            ))}
+          </Grid>
+        </Container>
+      </Section>
+
+      <Section style={{ background: COLORS.neutral }}>
+        <Container>
+          <SectionTitle>Semilleristas del Grupo</SectionTitle>
+          <SectionSubtitle>
+            Conoce al talento joven que lidera la investigación del futuro
+          </SectionSubtitle>
+          
+          <Grid columns={3}>
+            {semilleristasEjemplo.map(semillerista => (
+              <SemilleristCard 
+                key={semillerista.id} 
+                semillerista={semillerista}
+              />
+            ))}
+          </Grid>
+        </Container>
+      </Section>
+
+      <Section>
+        <Container>
+          <SectionTitle>¿Por qué unirse al Semillero?</SectionTitle>
+          <SectionSubtitle>Desarrolla tu carrera en investigación de alto nivel</SectionSubtitle>
+          
+          <Grid columns={3}>
+            {[
+              { icon: '🔬', titulo: 'Investigación Rigurosa', desc: 'Trabaja con metodologías científicas de vanguardia' },
+              { icon: '🤝', titulo: 'Comunidad Vibrante', desc: 'Colabora con expertos y estudiantes apasionados' },
+              { icon: '🌍', titulo: 'Impacto Global', desc: 'Publica en revistas internacionales de alto nivel' },
+            ].map((item, idx) => (
+              <div key={idx} style={{ textAlign: 'center' }}>
+                <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>{item.icon}</div>
+                <h4 style={{ color: COLORS.primary, marginBottom: '0.5rem' }}>{item.titulo}</h4>
+                <p style={{ color: '#666', fontSize: '0.95rem' }}>{item.desc}</p>
+              </div>
+            ))}
+          </Grid>
+        </Container>
+      </Section>
+
+      <Footer />
+    </>
+  );
+};
+
+export default HomePage;
