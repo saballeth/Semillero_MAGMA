@@ -12,10 +12,10 @@ const semilleristasEjemplo: Semillerista[] = [
   {
     id: '1',
     nombre: 'María Fernanda',
-    apellido: '',
+    apellido: 'Mafe',
     email: 'maria.fernanda@unal.edu.co',
     foto: '',
-    linea: 'Biosensores y Bioelectrónica',
+    linea: 'Gestión de Reuniones e Información',
     estado: 'activo'
   },
   {
@@ -33,16 +33,16 @@ const semilleristasEjemplo: Semillerista[] = [
     apellido: 'Lima',
     email: 'juan.lima@unal.edu.co',
     foto: '',
-    linea: 'Implantes Biocompatibles',
+    linea: 'Apoyo General',
     estado: 'activo'
   },
   {
     id: '4',
-    nombre: 'Elimelec José Ricardo',
-    apellido: '',
+    nombre: 'Elimelec',
+    apellido: 'José Ricardo',
     email: 'elimelec.jose@unal.edu.co',
     foto: '',
-    linea: 'Sistemas Embebidos',
+    linea: 'Coordinación Técnica y Semilleristas',
     estado: 'activo'
   },
   {
@@ -60,7 +60,7 @@ const semilleristasEjemplo: Semillerista[] = [
     apellido: 'Rios',
     email: 'albert.rios@unal.edu.co',
     foto: '',
-    linea: 'Gestión y Documentación',
+    linea: 'Gestión de Información y Documentación',
     estado: 'activo'
   },
 ];
