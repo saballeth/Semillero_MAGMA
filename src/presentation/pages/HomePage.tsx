@@ -82,7 +82,8 @@ const convocatoriasEjemplo: Convocatoria[] = [
       'Proyecto de investigación definido',
       'Excelente desempeño académico'
     ],
-    estado: 'proxima'
+    estado: 'proxima',
+    enlaceFormulario: 'https://forms.example.com/pasantias-bioelectronica'
   },
 ];
 
