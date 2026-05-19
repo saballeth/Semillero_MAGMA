@@ -7,13 +7,13 @@ export const GRUPO_MAGMA_INFO = {
   // Cosas a mejorar
   mejoras: {
     diapositivas: {
-      titulo: 'Mejora en Diapositivas',
+      titulo: 'Mejoras en Diapositivas',
       descripcion: 'Estandarizar el formato y contenido de presentaciones',
       detalles: [
-        'No incluir sujetos por motivos de confidencialidad',
-        'Ser más claros en la presentación de conceptos',
-        'Incluir normativa aplicable',
-        'Detallar claramente qué se está haciendo en cada fase'
+        'No meter sujetos por motivos de confidencialidad',
+        'Ser más claros',
+        'Normativa',
+        'Ser más claros en qué se está haciendo'
       ]
     }
   },
@@ -26,8 +26,7 @@ export const GRUPO_MAGMA_INFO = {
       rol: 'Coordinador Técnico',
       responsabilidades: [
         'Inscripción de los semilleristas',
-        'Apoyo técnico general',
-        'Seguimiento de proyectos'
+        'Apoyo'
       ]
     },
     {
@@ -35,9 +34,8 @@ export const GRUPO_MAGMA_INFO = {
       nombre: 'Mafe',
       rol: 'Gestora de Información',
       responsabilidades: [
-        'Gestión de reuniones',
-        'Organización de información del grupo',
-        'Apoyo administrativo'
+        'Gestión de reuniones e información',
+        'Apoyo'
       ]
     },
     {
@@ -45,28 +43,24 @@ export const GRUPO_MAGMA_INFO = {
       nombre: 'Camilo',
       rol: 'Desarrollador Web',
       responsabilidades: [
-        'Desarrollo y mantenimiento de la página web',
-        'Diseño de la plataforma digital',
-        'Proyecto de página web'
+        'Página web'
       ]
     },
     {
       id: 4,
       nombre: 'Juan Carlos',
-      rol: 'Apoyo General',
+      rol: 'Apoyo General y Software',
       responsabilidades: [
-        'Apoyo en proyectos diversos',
-        'Asistencia en eventos'
+        'Apoyo',
+        'Software'
       ]
     },
     {
       id: 5,
-      nombre: 'Juan de Lima',
-      rol: 'Especialista en Software',
+      nombre: 'Juan D Lima',
+      rol: 'Especialista en Apoyo',
       responsabilidades: [
-        'Desarrollo de software',
-        'Apoyo técnico en programación',
-        'Desarrollo de herramientas'
+        'Apoyo'
       ]
     },
     {
@@ -74,10 +68,8 @@ export const GRUPO_MAGMA_INFO = {
       nombre: 'Albert',
       rol: 'Responsable de Información',
       responsabilidades: [
-        'Gestión del Drive con información del grupo',
-        'Organización de documentación',
-        'Mantenimiento de rama MagmaBio (en proceso)',
-        'Proyecto de gestión de información'
+        'Apoyo',
+        'Drive con la información del grupo o de la rama de Magma (en proceso)'
       ]
     }
   ],
