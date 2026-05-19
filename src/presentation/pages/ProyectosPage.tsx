@@ -6,6 +6,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Hero from '../components/Hero';
 import ProyectoCard from '../components/ProyectoCard';
+import GrupoMagmaCard from '../components/GrupoMagmaCard';
 import type { Proyecto } from '../../shared/types';
 
 const proyectosEjemplo: Proyecto[] = [
@@ -59,6 +60,16 @@ const proyectosEjemplo: Proyecto[] = [
     investigadores: ['Dr. Antonio Silva'],
     tags: ['Sensores', 'Inalámbrico', 'Bajo Consumo'],
     fechaInicio: '2026-09-01',
+  },
+  {
+    id: '6',
+    titulo: 'Grupo Magma - Gestión y Organización',
+    descripcion: 'Proyecto de organización interna del Semillero MagmaBio con roles definidos, responsabilidades y mejoras continuas. Gestión de equipo y recursos del grupo de investigación.',
+    imagen: '',
+    estado: 'activo',
+    investigadores: ['Elimelec', 'Mafe', 'Camilo', 'Juan Carlos', 'Juan de Lima', 'Albert'],
+    tags: ['Gestión', 'Organización', 'Administración'],
+    fechaInicio: '2026-01-01',
   },
 ];
 
@@ -166,6 +177,19 @@ export const ProyectosPage: React.FC = () => {
               ))}
             </Grid>
           )}
+        </Container>
+      </Section>
+
+      {/* Sección del Grupo Magma */}
+      <Section style={{ background: 'linear-gradient(135deg, rgba(10, 59, 94, 0.05), rgba(0, 168, 232, 0.05))' }}>
+        <Container>
+          <SectionTitle>Organización del Grupo Magma</SectionTitle>
+          <SectionSubtitle>
+            Información sobre roles, responsabilidades y mejoras continuas del semillero
+          </SectionSubtitle>
+          <Grid columns={1}>
+            <GrupoMagmaCard />
+          </Grid>
         </Container>
       </Section>
 

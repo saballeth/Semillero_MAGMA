@@ -43,6 +43,16 @@ const proyectosEjemplo: Proyecto[] = [
     fechaInicio: '2022-03-10',
     fechaFin: '2024-03-10',
   },
+  {
+    id: '4',
+    titulo: 'Grupo Magma - Gestión y Organización',
+    descripcion: 'Proyecto de organización interna del Semillero MagmaBio. Incluye roles, responsabilidades y mejoras continuas del grupo.',
+    imagen: '',
+    estado: 'activo',
+    investigadores: ['Elimelec', 'Mafe', 'Camilo', 'Juan Carlos', 'Juan de Lima', 'Albert'],
+    tags: ['Gestión', 'Organización', 'Administración'],
+    fechaInicio: '2026-01-01',
+  },
 ];
 
 const convocatoriasEjemplo: Convocatoria[] = [
