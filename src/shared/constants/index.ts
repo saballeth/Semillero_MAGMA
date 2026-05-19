@@ -1,15 +1,15 @@
 // Información del grupo de investigación
 export const GROUP_INFO = {
-  nombre: 'Grupo de Investigación en Ingeniería Electrónica',
-  sigla: 'MAGMA',
-  descripcion: 'Centro de excelencia en investigación y desarrollo de tecnologías en ingeniería electrónica',
-  email: 'contacto@magma.edu',
+  nombre: 'Semillero MagmaBio',
+  sigla: 'MagmaBio',
+  descripcion: 'Semillero de investigación dedicado a la biotecnología y sus aplicaciones en ingeniería electrónica, enfocado en formar investigadores de vanguardia en bioelectrónica',
+  email: 'contacto@magmabio.edu',
   telefonos: ['+57 (1) 123-4567', '+57 (1) 123-4568'],
   direccion: 'Universidad del Magdalena',
   redesSociales: {
-    github: 'https://github.com/magma',
-    linkedin: 'https://linkedin.com/company/magma',
-    twitter: 'https://twitter.com/magma',
+    github: 'https://github.com/magmabio',
+    linkedin: 'https://linkedin.com/company/magmabio',
+    twitter: 'https://twitter.com/magmabio',
   }
 };
 

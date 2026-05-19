@@ -120,7 +120,7 @@ export const Header: React.FC<HeaderProps> = () => {
       <Container>
         <Flex justify="space-between" align="center">
           <Logo onClick={handleLogoClick}>
-            MA<span>GMA</span>
+            Magma<span>Bio</span>
           </Logo>
           
           <MenuToggle onClick={() => setIsMenuOpen(!isMenuOpen)}>

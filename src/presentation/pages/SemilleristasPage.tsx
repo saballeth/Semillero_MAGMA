@@ -15,7 +15,7 @@ const semilleristasEjemplo: Semillerista[] = [
     apellido: 'Firulaiz González',
     email: 'laura.perez@unal.edu.co',
     foto: '',
-    linea: 'Procesamiento Digital de Señales',
+    linea: 'Biosensores y Bioelectrónica',
     estado: 'activo',
     redesSociales: {
       github: 'https://github.com/lauraaperez',
@@ -28,7 +28,7 @@ const semilleristasEjemplo: Semillerista[] = [
     apellido: 'Segundo López',
     email: 'daniel.rodriguez@unal.edu.co',
     foto: '',
-    linea: 'Electrónica de Potencia',
+    linea: 'Interfaz Cerebro-Computadora',
     estado: 'activo',
     redesSociales: {
       github: 'https://github.com/drodriguezl'
@@ -118,8 +118,8 @@ export const SemilleristasPage: React.FC = () => {
       <Header activeRoute="/semilleristas" />
       
       <Hero
-        title="Semilleristas del Grupo"
-        subtitle="Talento joven liderando la investigación electrónica del futuro"
+        title="Semilleristas de MagmaBio"
+        subtitle="Investigadores dedicados a la innovación en bioelectrónica"
       />
 
       <Section>

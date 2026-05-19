@@ -14,32 +14,32 @@ import type { Proyecto, Convocatoria, Semillerista } from '../../shared/types';
 const proyectosEjemplo: Proyecto[] = [
   {
     id: '1',
-    titulo: 'Sistema de Monitoreo IoT',
-    descripcion: 'Desarrollo de un sistema inteligente de monitoreo en tiempo real para aplicaciones industriales.',
+    titulo: 'Biosensores Electrónicos para Diagnóstico',
+    descripcion: 'Desarrollo de biosensores que utilizan señales electrónicas para detección temprana de biomarcadores.',
     imagen: '',
     estado: 'activo',
     investigadores: ['Dr. Juan García', 'Ing. María López'],
-    tags: ['IoT', 'Embebidos', 'Tiempo Real'],
+    tags: ['Biosensores', 'Bioelectrónica', 'Diagnóstico'],
     fechaInicio: '2024-01-15',
   },
   {
     id: '2',
-    titulo: 'Procesamiento de Señales Biomédicas',
-    descripcion: 'Análisis avanzado de señales ECG y EEG usando técnicas de machine learning.',
+    titulo: 'Interfaz Cerebro-Computadora (BCI)',
+    descripcion: 'Investigación en interfaces neuronales para comunicación directa entre el cerebro y dispositivos electrónicos.',
     imagen: '',
     estado: 'activo',
     investigadores: ['Dr. Carlos Ruiz', 'Ing. Ana Martinez'],
-    tags: ['Biomédica', 'DSP', 'ML'],
+    tags: ['BCI', 'Neurobiología', 'Electrónica'],
     fechaInicio: '2023-09-01',
   },
   {
     id: '3',
-    titulo: 'Convertidores DC-DC de Alta Eficiencia',
-    descripcion: 'Investigación en convertidores de potencia para aplicaciones de energías renovables.',
+    titulo: 'Implantes Biocompatibles',
+    descripcion: 'Desarrollo de implantes electrónicos con materiales biocompatibles para aplicaciones médicas.',
     imagen: '',
     estado: 'finalizado',
     investigadores: ['Dr. Roberto Díaz'],
-    tags: ['Electrónica de Potencia', 'Energías Renovables'],
+    tags: ['Implantes', 'Biocompatibilidad', 'Medtech'],
     fechaInicio: '2022-03-10',
     fechaFin: '2024-03-10',
   },
@@ -48,28 +48,28 @@ const proyectosEjemplo: Proyecto[] = [
 const convocatoriasEjemplo: Convocatoria[] = [
   {
     id: '1',
-    titulo: 'Semilleristas 2026 - Ingeniería Electrónica',
-    descripcion: 'Convocatoria para estudiantes interesados en participar en proyectos de investigación del semillero Magma.',
+    titulo: 'Semilleristas MagmaBio 2026 - Biotecnología',
+    descripcion: 'Convocatoria para estudiantes interesados en participar en proyectos de investigación en bioelectrónica y biotecnología.',
     fechaInicio: '2026-04-15',
     fechaFin: '2026-05-30',
     requisitos: [
-      'Estudiante activo de ingeniería electrónica',
+      'Estudiante activo de ingeniería electrónica, biología o afines',
       'Promedio académico mínimo 3.5',
       'Disponibilidad de 10 horas semanales',
-      'Interés demostrado en investigación'
+      'Interés demostrado en biotecnología'
     ],
     estado: 'abierta',
     enlaceFormulario: 'https://forms.example.com/convocatoria-2026'
   },
   {
     id: '2',
-    titulo: 'Pasantías',
-    descripcion: 'Oportunidad de realizar pasantías de investigacion.',
+    titulo: 'Pasantías en Bioelectrónica',
+    descripcion: 'Oportunidad de realizar pasantías en investigación aplicada de bioelectrónica.',
     fechaInicio: '2026-05-01',
     fechaFin: '2026-06-15',
     requisitos: [
-      'Motivacion suficiente',
-      'Idea de investigacion de vanguardia',
+      'Formación en electrónica o biología',
+      'Proyecto de investigación definido',
       'Excelente desempeño académico'
     ],
     estado: 'proxima'
@@ -83,7 +83,7 @@ const semilleristasEjemplo: Semillerista[] = [
     apellido: 'Pérez González',
     email: 'laura.perez@unal.edu.co',
     foto: '',
-    linea: 'Procesamiento Digital de Señales',
+    linea: 'Biosensores y Bioelectrónica',
     estado: 'activo',
     redesSociales: {
       github: 'https://github.com/saballeth',
@@ -96,7 +96,7 @@ const semilleristasEjemplo: Semillerista[] = [
     apellido: 'Rodríguez López',
     email: 'daniel.rodriguez@unal.edu.co',
     foto: '',
-    linea: 'Electrónica de Potencia',
+    linea: 'Interfaz Cerebro-Computadora',
     estado: 'activo',
     redesSociales: {
       github: 'https://github.com/saballeth'
@@ -108,7 +108,7 @@ const semilleristasEjemplo: Semillerista[] = [
     apellido: 'Salazar Martínez',
     email: 'camila.salazar@unal.edu.co',
     foto: '',
-    linea: 'Sistemas Embebidos',
+    linea: 'Implantes Biocompatibles',
     estado: 'activo'
   },
 ];
@@ -174,8 +174,8 @@ export const HomePage: React.FC = () => {
       <Header activeRoute="/" />
       
       <Hero
-        title="Semillero de Investigación en Ingeniería Electrónica"
-        subtitle="Excelencia en investigación, innovación tecnológica y formación de investigadores de vanguardia"
+        title="Semillero MagmaBio"
+        subtitle="Investigación de vanguardia en biotecnología e ingeniería electrónica para soluciones biomédicas innovadoras"
         primaryButtonText="Ver Proyectos"
         primaryButtonHref="proyectos"
         secondaryButtonText="Convocatorias Activas"
@@ -225,9 +225,9 @@ export const HomePage: React.FC = () => {
 
       <Section>
         <Container>
-          <SectionTitle>Convocatorias Abiertas</SectionTitle>
+          <SectionTitle>Oportunidades en MagmaBio</SectionTitle>
           <SectionSubtitle>
-            Únete a nuestro equipo de investigadores y desarrolladores
+            Únete a nuestro semillero y desarrolla investigación en biotecnología
           </SectionSubtitle>
           
           <Grid columns={2}>
@@ -243,9 +243,9 @@ export const HomePage: React.FC = () => {
 
       <Section style={{ background: COLORS.neutral }}>
         <Container>
-          <SectionTitle>Semilleristas del Grupo</SectionTitle>
+          <SectionTitle>Nuestros Semilleristas</SectionTitle>
           <SectionSubtitle>
-            Conoce al talento joven que lidera la investigación del futuro
+            Investigadores dedicados a la innovación en bioelectrónica
           </SectionSubtitle>
           
           <Grid columns={3}>

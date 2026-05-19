@@ -11,33 +11,33 @@ import type { Galeria } from '../../shared/types';
 const galeríaEjemplo: Galeria[] = [
   {
     id: '1',
-    titulo: 'Laboratorio Principal',
+    titulo: 'Laboratorio de Bioelectrónica',
     imagen: '',
-    proyecto: 'IoT General',
+    proyecto: 'Biosensores Electrónicos',
     fecha: '2026-03-15',
-    descripcion: 'Vista del laboratorio con equipos de medición'
+    descripcion: 'Laboratorio equipado con instrumentos de medición de biosensores'
   },
   {
     id: '2',
-    titulo: 'Reunión de Investigadores',
+    titulo: 'Sesión de Investigación en BCI',
     imagen: '',
-    proyecto: 'Semilleristas 2025',
+    proyecto: 'Interfaz Cerebro-Computadora',
     fecha: '2026-03-20',
-    descripcion: 'Sesión de planificación del segundo trimestre'
+    descripcion: 'Sesión de trabajo en la interfaz cerebro-computadora'
   },
   {
     id: '3',
-    titulo: 'Presentación en Congreso',
+    titulo: 'Presentación en Congreso de Biotecnología',
     imagen: '',
-    proyecto: 'Procesamiento de Señales',
+    proyecto: 'Implantes Biocompatibles',
     fecha: '2026-02-10',
-    descripcion: 'Presentación de resultados en congreso nacional'
+    descripcion: 'Presentación de resultados en congreso internacional de biotecnología'
   },
   {
     id: '4',
-    titulo: 'Pruebas de Hardware',
+    titulo: 'Pruebas de Biocompatibilidad',
     imagen: '',
-    proyecto: 'Convertidores DC-DC',
+    proyecto: 'Implantes Biocompatibles',
     fecha: '2026-01-25',
     descripcion: 'Pruebas funcionales en laboratorio'
   },
@@ -173,8 +173,8 @@ export const GaleriaPage: React.FC = () => {
       <Header activeRoute="/galeria" />
       
       <Hero
-        title="Galería de Proyectos"
-        subtitle="Momentos clave de la investigación en imágenes"
+        title="Galería de Bioelectrónica"
+        subtitle="Momentos clave de la investigación en MagmaBio"
       />
 
       <Section>

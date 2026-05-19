@@ -11,22 +11,22 @@ import type { Proyecto } from '../../shared/types';
 const proyectosEjemplo: Proyecto[] = [
   {
     id: '1',
-    titulo: 'Sistema de Monitoreo IoT',
-    descripcion: 'Desarrollo de un sistema inteligente de monitoreo en tiempo real para aplicaciones industriales.',
+    titulo: 'Biosensores Electrónicos para Diagnóstico',
+    descripcion: 'Desarrollo de biosensores que utilizan señales electrónicas para detección temprana de biomarcadores.',
     imagen: '',
     estado: 'activo',
     investigadores: ['Dr. Juan García', 'Ing. María López'],
-    tags: ['IoT', 'Embebidos', 'Tiempo Real'],
+    tags: ['Biosensores', 'Bioelectrónica', 'Diagnóstico'],
     fechaInicio: '2024-01-15',
   },
   {
     id: '2',
-    titulo: 'Procesamiento de Señales Biomédicas',
-    descripcion: 'Análisis avanzado de señales ECG y EEG usando técnicas de machine learning.',
+    titulo: 'Interfaz Cerebro-Computadora (BCI)',
+    descripcion: 'Investigación en interfaces neuronales para comunicación directa entre el cerebro y dispositivos electrónicos.',
     imagen: '',
     estado: 'activo',
     investigadores: ['Dr. Carlos Ruiz', 'Ing. Ana Martinez'],
-    tags: ['Biomédica', 'DSP', 'ML'],
+    tags: ['BCI', 'Neurobiología', 'Electrónica'],
     fechaInicio: '2023-09-01',
   },
   {
@@ -119,8 +119,8 @@ export const ProyectosPage: React.FC = () => {
       <Header activeRoute="/proyectos" />
       
       <Hero
-        title="Proyectos de Investigación"
-        subtitle="Iniciativas que transforman la ingeniería electrónica"
+        title="Proyectos de Bioelectrónica"
+        subtitle="Iniciativas de investigación innovadoras en biotecnología e ingeniería electrónica"
       />
 
       <Section>

@@ -11,33 +11,33 @@ import type { Documento } from '../../shared/types';
 const documentosEjemplo: Documento[] = [
   {
     id: '1',
-    titulo: 'Real-Time Monitoring System for Industrial Applications',
+    titulo: 'Biosensores Electrónicos de Nueva Generación',
     tipo: 'paper',
     autor: 'García, J., López, M., et al.',
     fecha: '2025-12-15',
     enlace: 'https://example.com/paper1.pdf',
-    proyecto: 'Sistema de Monitoreo IoT',
-    resumen: 'Presentamos un sistema de monitoreo en tiempo real basado en IoT que integra sensores inalámbricos de bajo consumo.'
+    proyecto: 'Biosensores Electrónicos para Diagnóstico',
+    resumen: 'Desarrollo de biosensores de alta sensibilidad para detección temprana de biomarcadores utilizando señales electrónicas.'
   },
   {
     id: '2',
-    titulo: 'Análisis Espectral de Señales Biomédicas Mediante Wavelets',
+    titulo: 'Interfaces Cerebro-Computadora: Avances y Aplicaciones',
     tipo: 'tesis',
     autor: 'Ruiz, C.',
     fecha: '2025-10-20',
     enlace: 'https://example.com/tesis1.pdf',
-    proyecto: 'Procesamiento de Señales Biomédicas',
-    resumen: 'Investigación doctoral sobre técnicas avanzadas de análisis espectral para señales ECG y EEG.'
+    proyecto: 'Interfaz Cerebro-Computadora (BCI)',
+    resumen: 'Investigación doctoral sobre nuevas tecnologías en interfaces neuronales para comunicación directa.'
   },
   {
     id: '3',
-    titulo: 'Informe de Resultados - Convertidores DC-DC Q3 2025',
+    titulo: 'Materiales Biocompatibles para Implantes Electrónicos - Informe Q3 2025',
     tipo: 'informe',
     autor: 'Díaz, R., Silva, A.',
     fecha: '2025-09-30',
     enlace: 'https://example.com/informe1.pdf',
-    proyecto: 'Convertidores DC-DC de Alta Eficiencia',
-    resumen: 'Resumen ejecutivo de los resultados obtenidos en el tercer trimestre del proyecto.'
+    proyecto: 'Implantes Biocompatibles',
+    resumen: 'Resumen ejecutivo de los avances en materiales biocompatibles para implantes electrónicos médicos.'
   },
   {
     id: '4',
@@ -142,8 +142,8 @@ export const DocumentacionPage: React.FC = () => {
       <Header activeRoute="/documentacion" />
       
       <Hero
-        title="Documentación"
-        subtitle="Accede a papers, tesis, informes y presentaciones del grupo"
+        title="Documentación Científica"
+        subtitle="Accede a papers, tesis e investigaciones de MagmaBio"
       />
 
       <Section>

@@ -11,23 +11,23 @@ import type { Convocatoria } from '../../shared/types';
 const convocatoriasEjemplo: Convocatoria[] = [
   {
     id: '1',
-    titulo: 'Semilleristas 2026 - Ingeniería Electrónica',
-    descripcion: 'Convocatoria para estudiantes de pregrado interesados en participar en proyectos de investigación del grupo GIRIE. Buscamos estudiantes con pasión por la investigación y disposición a contribuir en las líneas del grupo.',
+    titulo: 'Semilleristas MagmaBio 2026 - Biotecnología',
+    descripcion: 'Convocatoria para estudiantes interesados en participar en proyectos de investigación en bioelectrónica y biotecnología aplicada.',
     fechaInicio: '2026-04-15',
     fechaFin: '2026-05-30',
     requisitos: [
-      'Estudiante activo de ingeniería electrónica o carreras afines',
+      'Estudiante activo de ingeniería electrónica, biología o carreras afines',
       'Promedio académico mínimo 3.5/5.0',
       'Disponibilidad de 10 horas semanales',
-      'Interés demostrado en investigación',
+      'Interés demostrado en biotecnología',
       'Haber completado al menos 60% del currículo'
     ],
     estado: 'abierta',
-    enlaceFormulario: 'https://forms.example.com/convocatoria-semilleristas-2026'
+    enlaceFormulario: 'https://forms.example.com/convocatoria-magmabio-2026'
   },
   {
     id: '2',
-    titulo: 'Pasantías Internacionales',
+    titulo: 'Pasantías en Bioelectrónica',
     descripcion: 'Oportunidad de realizar pasantía en universidades aliadas del extranjero para colaborar en investigaciones de vanguardia. Esta es una oportunidad única para expandir tu red académica internacional.',
     fechaInicio: '2026-05-01',
     fechaFin: '2026-06-15',
@@ -113,8 +113,8 @@ export const ConvocatoriasPage: React.FC = () => {
       <Header activeRoute="/convocatorias" />
       
       <Hero
-        title="Convocatorias y Oportunidades"
-        subtitle="Únete a nuestra comunidad de investigadores"
+        title="Oportunidades en MagmaBio"
+        subtitle="Únete a nuestro semillero de investigación en biotecnología"
       />
 
       {convocatoriasAbiertas.length > 0 && (

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirecting...</title>
+    <script>
+      // GitHub Pages 404.html redirect for SPA
+      // When a route doesn't exist, GitHub Pages serves this 404.html
+      // We capture the path and redirect to index.html with it as a query param
+      var pathSegments = window.location.pathname.split('/').filter(Boolean);
+      var isFile = pathSegments.length > 0 && pathSegments[pathSegments.length - 1].indexOf('.') > -1;
+      
+      if (!isFile && pathSegments.length > 1) {
+        var l = window.location;
+        l.replace(
+          l.protocol + '//' + l.hostname + '/Semillero_MAGMA/index.html?redirect=' + 
+          l.pathname.substring(1) + (l.search || '')
+        );
+      } else {
+        window.location.replace('/Semillero_MAGMA/');
+      }
+    </script>
+  </head>
+  <body></body>
+</html>
