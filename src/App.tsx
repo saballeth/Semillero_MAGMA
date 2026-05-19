@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import { createGlobalStyle } from 'styled-components';
 import { COLORS, TYPOGRAPHY } from './shared/constants';
 
@@ -106,16 +106,14 @@ function App() {
   return (
     <>
       <GlobalStyle />
-      <Router>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/proyectos" element={<ProyectosPage />} />
-          <Route path="/convocatorias" element={<ConvocatoriasPage />} />
-          <Route path="/semilleristas" element={<SemilleristasPage />} />
-          <Route path="/galeria" element={<GaleriaPage />} />
-          <Route path="/documentacion" element={<DocumentacionPage />} />
-        </Routes>
-      </Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/proyectos" element={<ProyectosPage />} />
+        <Route path="/convocatorias" element={<ConvocatoriasPage />} />
+        <Route path="/semilleristas" element={<SemilleristasPage />} />
+        <Route path="/galeria" element={<GaleriaPage />} />
+        <Route path="/documentacion" element={<DocumentacionPage />} />
+      </Routes>
     </>
   );
 }

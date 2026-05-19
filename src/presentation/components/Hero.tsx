@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import { COLORS, TYPOGRAPHY } from '../../shared/constants';
 import { Container, Flex } from '../../shared/utils/styledComponents';
 
@@ -57,7 +58,7 @@ const HeroActions = styled(Flex)`
   }
 `;
 
-const HeroButton = styled.button<{ variant?: 'primary' | 'secondary' }>`
+const HeroButton = styled(Link)<{ variant?: 'primary' | 'secondary' }>`
   padding: 1rem 2rem;
   font-size: ${TYPOGRAPHY.fontSize.base};
   font-weight: ${TYPOGRAPHY.fontWeight.semibold};
@@ -68,6 +69,8 @@ const HeroButton = styled.button<{ variant?: 'primary' | 'secondary' }>`
   background-color: ${props => props.variant === 'secondary' ? 'transparent' : COLORS.white};
   color: ${props => props.variant === 'secondary' ? COLORS.white : COLORS.primary};
   border: ${props => props.variant === 'secondary' ? `2px solid ${COLORS.white}` : 'none'};
+  display: inline-block;
+  text-decoration: none;
 
   &:hover {
     transform: translateY(-2px);
@@ -81,6 +84,7 @@ const HeroButton = styled.button<{ variant?: 'primary' | 'secondary' }>`
 
   @media (max-width: 640px) {
     width: 100%;
+    text-align: center;
   }
 `;
 
@@ -110,8 +114,7 @@ export const Hero: React.FC<HeroProps> = ({
           <HeroActions>
             {primaryButtonText && (
               <HeroButton
-                as="a"
-                href={primaryButtonHref || '#'}
+                to={primaryButtonHref || '/'}
                 variant="primary"
               >
                 {primaryButtonText}
@@ -119,8 +122,7 @@ export const Hero: React.FC<HeroProps> = ({
             )}
             {secondaryButtonText && (
               <HeroButton
-                as="a"
-                href={secondaryButtonHref || '#'}
+                to={secondaryButtonHref || '/'}
                 variant="secondary"
               >
                 {secondaryButtonText}

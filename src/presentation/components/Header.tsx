@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import { Link, useLocation } from 'react-router-dom';
 import { COLORS, ROUTES, TYPOGRAPHY } from '../../shared/constants';
 import { Container, Flex } from '../../shared/utils/styledComponents';
 
@@ -29,12 +30,13 @@ const Logo = styled.h1`
   }
 `;
 
-const NavLink = styled.a<{ active?: boolean }>`
+const NavLink = styled(Link)<{ active?: boolean }>`
   font-size: ${TYPOGRAPHY.fontSize.sm};
   color: ${props => props.active ? COLORS.secondary : COLORS.dark};
   font-weight: ${props => props.active ? TYPOGRAPHY.fontWeight.semibold : TYPOGRAPHY.fontWeight.normal};
   position: relative;
   transition: color 0.3s ease;
+  text-decoration: none;
 
   &::after {
     content: '';
@@ -96,8 +98,9 @@ interface HeaderProps {
   activeRoute?: string;
 }
 
-export const Header: React.FC<HeaderProps> = ({ activeRoute }) => {
+export const Header: React.FC<HeaderProps> = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
 
   const navigationItems = [
     { label: 'Inicio', href: ROUTES.HOME },
@@ -108,11 +111,15 @@ export const Header: React.FC<HeaderProps> = ({ activeRoute }) => {
     { label: 'Documentación', href: ROUTES.DOCUMENTACION },
   ];
 
+  const handleLogoClick = () => {
+    window.location.hash = ROUTES.HOME;
+  };
+
   return (
     <HeaderWrapper>
       <Container>
         <Flex justify="space-between" align="center">
-          <Logo>
+          <Logo onClick={handleLogoClick}>
             MA<span>GMA</span>
           </Logo>
           
@@ -124,8 +131,9 @@ export const Header: React.FC<HeaderProps> = ({ activeRoute }) => {
             {navigationItems.map(item => (
               <NavLink 
                 key={item.href}
-                href={item.href}
-                active={activeRoute === item.href}
+                to={item.href}
+                active={location.pathname === item.href}
+                onClick={() => setIsMenuOpen(false)}
               >
                 {item.label}
               </NavLink>
