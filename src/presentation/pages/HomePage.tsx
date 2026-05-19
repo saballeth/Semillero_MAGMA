@@ -90,36 +90,56 @@ const convocatoriasEjemplo: Convocatoria[] = [
 const semilleristasEjemplo: Semillerista[] = [
   {
     id: '1',
-    nombre: 'Laura',
-    apellido: 'Pérez González',
-    email: 'laura.perez@unal.edu.co',
+    nombre: 'María Fernanda',
+    apellido: 'Mafe',
+    email: 'maria.fernanda@unal.edu.co',
     foto: '',
-    linea: 'Biosensores y Bioelectrónica',
-    estado: 'activo',
-    redesSociales: {
-      github: 'https://github.com/saballeth',
-      linkedin: 'https://www.linkedin.com/in/camilo-saballeth/'
-    }
+    linea: 'Gestión de Reuniones e Información',
+    estado: 'activo'
   },
   {
     id: '2',
-    nombre: 'Daniel',
-    apellido: 'Rodríguez López',
-    email: 'daniel.rodriguez@unal.edu.co',
+    nombre: 'Juan',
+    apellido: 'Orozco',
+    email: 'juan.orozco@unal.edu.co',
     foto: '',
     linea: 'Interfaz Cerebro-Computadora',
-    estado: 'activo',
-    redesSociales: {
-      github: 'https://github.com/saballeth'
-    }
+    estado: 'activo'
   },
   {
     id: '3',
-    nombre: 'Camila',
-    apellido: 'Salazar Martínez',
-    email: 'camila.salazar@unal.edu.co',
+    nombre: 'Juan D',
+    apellido: 'Lima',
+    email: 'juan.lima@unal.edu.co',
     foto: '',
-    linea: 'Implantes Biocompatibles',
+    linea: 'Apoyo General',
+    estado: 'activo'
+  },
+  {
+    id: '4',
+    nombre: 'Elimelec',
+    apellido: 'José Ricardo',
+    email: 'elimelec.jose@unal.edu.co',
+    foto: '',
+    linea: 'Coordinación Técnica y Semilleristas',
+    estado: 'activo'
+  },
+  {
+    id: '5',
+    nombre: 'Caleth',
+    apellido: 'Godoy Taborda',
+    email: 'caleth.godoy@unal.edu.co',
+    foto: '',
+    linea: 'Procesamiento de Señales',
+    estado: 'activo'
+  },
+  {
+    id: '6',
+    nombre: 'Albert',
+    apellido: 'Rios',
+    email: 'albert.rios@unal.edu.co',
+    foto: '',
+    linea: 'Gestión de Información y Documentación',
     estado: 'activo'
   },
 ];
